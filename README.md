@@ -56,3 +56,5 @@ https://europe-west2-my-url-project.cloudfunctions.net/navigator
 Now any call to e.g. https://europe-west2-my-url-project.cloudfunctions.net/navigator/abc (assuming the spreadsheet defined as above) will redirect the user to https://drive.google.com. Note that (somehow un-intuitively if you’ve used expressJS before) req.url will be set to /abc even if the function responds to /navigator/abc.
 
 That’s all folks!
+
+reference link ==> https://medium.com/google-cloud/shortening-urls-with-google-functions-and-google-sheets-da3a2003557a
