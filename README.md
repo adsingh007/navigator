@@ -9,12 +9,16 @@ In the setup I’m proposing the role of this database is fulfilled by a Google 
 
 In order to make it completely serverless we could use capabilities of a domain registrar (I’m using Namecheap) to bulk resolve the requests for a specific domain/subdomain to a predefined URL (that of your Cloud Function). For Namecheap this feature is available for any domain using their Basic DNS under Manage (for the respective domain) / Redirect Domain
 ![image](https://github.com/user-attachments/assets/49c74f2d-1705-46ff-a76b-5dd8bcca3797)
+
+
 Assuming that this management page is for short.domain, we could add a redirect by entering short.domain in the source URL and the URL of the function (that we’ll obtain below) in the destination URL.
 
 # Google Sheets
 As our “database” will be a Google Sheet, just create a spreadsheet document in Google Drive, name the first (default) spreadsheet ‘links’ and populate it with the redirects by entering the short URL on column A and the long URL on column B, like so
 
 ![image](https://github.com/user-attachments/assets/f83431c2-be2c-4f05-9f42-a51c14dd9ebf)
+
+
 In this example http://short.domain/xyz will have to lead to https://google.com while http://short.domain/yt to the YouTube link listed there. The thing that you’ll need to make note of (and write/copy) is the document id (the url of GSheet will look something like https://docs.google.com/spreadsheets/d/123abcdef/edit#gid=0 which makes 123abcdef the document id)
 
 # Google Cloud Console
